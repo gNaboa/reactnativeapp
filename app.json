@@ -5,6 +5,9 @@
       "bundler": "metro"
     },
     "name": "reactnative",
-    "slug": "reactnative"
+    "slug": "reactnative",
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
