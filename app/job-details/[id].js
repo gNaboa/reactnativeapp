@@ -8,6 +8,7 @@ import Company from '../../components/jobdetails/company/Company'
 import JobTabs from '../../components/jobdetails/tabs/Tabs'
 import Specifics from '../../components/jobdetails/specifics/Specifics'
 import JobAbout from '../../components/jobdetails/about/About'
+import { JobFooter } from '../../components'
 
 const tabs = ['About', 'Qualifications', 'Responsibilities']
 
@@ -41,6 +42,8 @@ function JobDetails() {
                     title="Responsibilities"
                     points={data[0].job_highlights?.Responsibilities ?? ['N/A']}
                 />
+            default:
+                break;
         }
     }
     return (
@@ -100,6 +103,8 @@ function JobDetails() {
                         </View>
                     )}
                 </ScrollView>
+
+                <JobFooter url={data[0]?.job_google_link ?? 'https://careers.google.com/jobs/results'} />
 
             </>
 
